@@ -10,3 +10,14 @@
 
   The ACM dataset can be obtained via the following link: https://github.com/RuixZh/SR-RSC
 
+Usage
+  python main.py \
+  --dataset     <DATASET>         \   # ACM / DBLP / Yelp
+  --split-strategy <STRATEGY>     \   # subject / venue / location
+  --framework   <FRAMEWORK>       \   # FedHGN / FedAvg / FedProx / Local / Central
+  --num-clients <K>               \   # number of clients (default: 3)
+  --gpu         <GPU_ID>          \   # GPU index; -1 for CPU
+  --random-seed <SEED>                # default: 1000
+
+For example
+  python main.py -d ACM -s subject -f FedHGN -c 3 -g 0 --use-attr-completion
